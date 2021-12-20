@@ -10,7 +10,7 @@ export function Main() {
     let [status, setStatus] = useState('');
     let [species, setSpecies] = useState('');
     let [gender, setGender] = useState('');
-    let characterPage = 1;
+    let [characterPage, setCharacterPage] = useState(1);
     let api = `https://rickandmortyapi.com/api/character?page=${characterPage}&name=${search}&status=${status}&species=${species}&gender=${gender}`
     useEffect(() => {
         (async function () {
@@ -26,6 +26,12 @@ export function Main() {
         setStatus('');
         setGender('');
         setSpecies('');
+    }
+    function suma() {
+        setCharacterPage(++characterPage)
+    }
+    function resta() {
+        setCharacterPage(--characterPage)
     }
     return (
         <main className="main">
@@ -77,8 +83,8 @@ export function Main() {
                 </div>
             </div>
             <div className="main-following">
-                <img className='arrowback' src={arrow} alt="" />
-                <img className='arrowfollowing' src={arrow} alt="" />
+                <img className='arrowback' src={arrow} alt="" onClick={() => { resta() }} />
+                <img className='arrowfollowing' src={arrow} alt="" onClick={() => { suma() }} />
             </div>
         </main>
     )
