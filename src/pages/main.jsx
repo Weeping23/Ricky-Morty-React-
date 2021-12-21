@@ -48,21 +48,23 @@ export function Main() {
             </div>
             <div className="main-content">
                 <div className="main-filter">
-                    <div>Status
-                        <input type="radio" name="status" id="" value="alive" onClick={(event) => { setStatus(event.target.value) }} />
-                        <label for="status"></label>
-                        <input type="radio" name="status" id="" value="dead" onClick={(event) => { setStatus(event.target.value) }} />
-                        <input type="radio" name="status" id="" value="unknown" onClick={(event) => { setStatus(event.target.value) }} />
+                    <div>
+                        <h4>Status</h4>
+                        <label for="status">Alive <input type="radio" name="status" id="" value="alive" onClick={(event) => { setStatus(event.target.value) }} /></label>
+                        <label for="status">Dead <input type="radio" name="status" id="" value="dead" onClick={(event) => { setStatus(event.target.value) }} /></label>
+                        <label for="status">Unknown <input type="radio" name="status" id="" value="unknown" onClick={(event) => { setStatus(event.target.value) }} /></label>
                     </div>
-                    <div>Species
-                        <input type="radio" name="species" id="" value="human" onClick={(event) => { setSpecies(event.target.value) }} />
-                        <input type="radio" name="species" id="" value="alien" onClick={(event) => { setSpecies(event.target.value) }} />
-                        <input type="radio" name="species" id="" value="unknown" onClick={(event) => { setSpecies(event.target.value) }} />
+                    <div>
+                        <h4>Species</h4>
+                        <label for="species">Human <input type="radio" name="species" id="" value="human" onClick={(event) => { setSpecies(event.target.value) }} /></label>                        
+                        <label for="species">Alien <input type="radio" name="species" id="" value="alien" onClick={(event) => { setSpecies(event.target.value) }} /></label>                        
+                        <label for="species">Unknown <input type="radio" name="species" id="" value="unknown" onClick={(event) => { setSpecies(event.target.value) }} /></label>
                     </div>
-                    <div>Gender
-                        <input type="radio" name="gender" id="" value="male" onClick={(event) => { setGender(event.target.value) }} />
-                        <input type="radio" name="gender" id="" value="female" onClick={(event) => { setGender(event.target.value) }} />
-                        <input type="radio" name="gender" id="" value="unknown" onClick={(event) => { setGender(event.target.value) }} />
+                    <div>
+                        <h4>Gender</h4>
+                        <label for="gender">Male <input type="radio" name="gender" id="" value="male" onClick={(event) => { setGender(event.target.value) }} /></label>                        
+                        <label for="gender">Female<input type="radio" name="gender" id="" value="female" onClick={(event) => { setGender(event.target.value) }} /></label>                        
+                        <label for="gender">Unknown<input type="radio" name="gender" id="" value="unknown" onClick={(event) => { setGender(event.target.value) }} /></label>
                     </div>
                 </div>
                 <div className="main-target">
@@ -77,7 +79,7 @@ export function Main() {
                             <p className={toLowerCase(personaje.status)}>{personaje.status}</p>
                         </div>
                         <div>
-                            <button className="buy">Buy</button>
+                            <button className="buy">Add to cart</button>
                         </div>
                     </article>)) :
                         (

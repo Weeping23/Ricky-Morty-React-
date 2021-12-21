@@ -6,6 +6,9 @@
   height: 100%;
   background-color: #F3F4F6;
 }
+body {
+  background-color: #F3F4F6;
+}
 .header{
   display: flex;
   justify-content: space-between;
@@ -81,6 +84,7 @@
   border: none;
   border-radius: 5px;
   height: 49px;
+  cursor: pointer;
 }
 .main-search-target{
   display: flex;
@@ -107,13 +111,18 @@
   align-items: center;
   width: 21%;
   background: springgreen;
-  height: 331px;
-  
+  height: max-content;
+  padding-bottom: 2%;
 }
 .main-filter div{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+label {
+  font-size: 14px;
+  align-self: justifiy;
 }
 .main-target{
   display: flex;
@@ -175,8 +184,9 @@ h3 {
 
 .alive,
 .dead,
-.unknown {
-  padding: 5px;
+.unknown
+{
+  padding: 7px;
   border-radius: 15px;
 }
 
@@ -191,4 +201,13 @@ h3 {
 .unknown {
   color: gray;
   background-color: rgb(206, 206, 206);
+}
+.buy {
+  border: none;
+  color: blue;
+  background-color: #98befc;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
 }
