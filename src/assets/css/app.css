@@ -64,6 +64,7 @@ body {
 .main-content{
   display: flex;
   width: 85%;
+  flex-wrap: wrap;
 }
 .main-search{
   width: 79%;

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import arrow from "../assets/img/arrow.svg";
+import { MainTarget } from '../components/maintarget';
+
 
 export function Main() {
-    function toLowerCase(textToEdit) {
-        return textToEdit.toLowerCase();
-    }
+    
     let [results, setResults] = useState([]);
     let [search, setSearch] = useState('');
     let [status, setStatus] = useState('');
@@ -19,19 +19,19 @@ export function Main() {
                 .then((data) => setResults(data.results));
         })()
     }, [api])
-    // const refreshPage = () => {
-    //     window.location.reload();
-    // }
-    let clearFilters = e => {
-        setStatus('');
-        setGender('');
-        setSpecies('');
+    const refreshPage = () => {
+        window.location.reload();
     }
     function suma() {
-        setCharacterPage(++characterPage)
+        if (characterPage === 42)
+            setCharacterPage(1);
+        else {
+            setCharacterPage(++characterPage)
+        }
     }
     function resta() {
-        setCharacterPage(--characterPage)
+        if (characterPage > 1)
+            setCharacterPage(--characterPage)
     }
     return (
         <main className="main">
@@ -39,14 +39,14 @@ export function Main() {
             <div className="main-search">
                 <div className="main-clear">
                     <h2>Filters</h2>
-                    <span onClick={clearFilters}>Clear filters</span>
+                    <span onClick={refreshPage}>Clear filters</span>
                 </div>
                 <div className="main-search-target">
                     <input type="search" name="" id="search" placeholder="Search a Character" onChange={(event) => { setSearch(event.target.value) }} />
                     <button id="search-button">Search</button>
                 </div>
             </div>
-            <div className="main-content">
+            <div div className="main-content">
                 <div className="main-filter">
                     <div>
                         <h4>Status</h4>
@@ -67,31 +67,16 @@ export function Main() {
                         <label for="gender">Unknown<input type="radio" name="gender" id="" value="unknown" onClick={(event) => { setGender(event.target.value) }} /></label>
                     </div>
                 </div>
-                <div className="main-target">
-                    {results ? results.map((personaje) =>
-                    (<article className="main-character">
-                        <div className="main-img">
-                            <img src={personaje.image} alt="" />
-                        </div>
-                        <h2>{personaje.name}</h2>
-                        <h3>{personaje.location.name}</h3>
-                        <div>
-                            <p className={toLowerCase(personaje.status)}>{personaje.status}</p>
-                        </div>
-                        <div>
-                            <button className="buy">Add to cart</button>
-                        </div>
-                    </article>)) :
-                        (
-                            <p>We couldn't find any results for <span className="couldn-find">"{search}"</span></p>
-                        )}
-                </div>
-            </div>
+                <MainTarget
+            results={results}
+            search={search}
+                />
+            
             <div className="main-following">
                 <img className='arrowback' src={arrow} alt="" onClick={() => { resta() }} />
                 <img className='arrowfollowing' src={arrow} alt="" onClick={() => { suma() }} />
             </div>
+            </div>
         </main>
     )
 }
-

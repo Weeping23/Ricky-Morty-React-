@@ -10,7 +10,7 @@ export function Header() {
       </div>
       <ul className="header-menu">
         <Link to="/">Characters</Link>
-        <li>Episodes</li>
+        <Link to="episode">Episode</Link>
         <li>Locations</li>
         <li><img src={cart} alt=""></img></li>
       </ul>
