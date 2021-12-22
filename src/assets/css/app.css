@@ -110,9 +110,10 @@ body {
   flex-direction: column;
   align-items: center;
   width: 21%;
-  background: springgreen;
+  background: white;
   height: max-content;
   padding-bottom: 2%;
+  border-radius: 15px;
 }
 .main-filter div{
   display: flex;
@@ -186,28 +187,31 @@ h3 {
 .dead,
 .unknown
 {
-  padding: 7px;
+  padding: 10px;
   border-radius: 15px;
+  width: 65px;
+  text-align: center;
 }
 
 .alive {
   color:green;
-  background-color: rgb(70, 214, 70);  
+  background-color: rgba(70, 214, 70, 0.5);  
 }
 .dead {
   color: red;
-  background-color: rgb(250, 116, 116);
+  background-color: rgba(250, 116, 116, 0.5);
 }
 .unknown {
   color: gray;
-  background-color: rgb(206, 206, 206);
+  background-color: rgba(206, 206, 206, 0.5);
 }
 .buy {
   border: none;
   color: blue;
-  background-color: #98befc;
+  background-color: #98befc9d;
   cursor: pointer;
   padding: 10px;
   border-radius: 5px;
   width: 150px;
+  font-weight: bold;
 }
