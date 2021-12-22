@@ -6,7 +6,6 @@ import arrow from "../assets/img/arrow.svg";
 import { CharacterTarget } from '../components/Characters/CharacterTarget';
 import { CharacterSearch } from '../components/Characters/CharacterSearch';
 import { Filters } from '../components/Characters/Filters';
-
 //**FUNCIÓN MATRIZ*/
 export function Characters() {
     //**DECLARO VARIABLE COMO STRING*/ 
@@ -33,12 +32,15 @@ export function Characters() {
         window.location.reload();
     }
     //** PROPS FUNCTION */
-    function filters(event) {
+    function changeStatus(event) {
         setStatus(event.target.value);
-        setSpecies(event.target.value);
+    }
+    function changeGender(event){
         setGender(event.target.value);
     }
-    //** PROPS FUNCTION */
+    function changeSpecies(event){
+        setSpecies(event.target.value);
+    }
     function searchChange(event) {
         setSearch(event.target.value);
     }
@@ -64,9 +66,9 @@ export function Characters() {
             />
             <div className="main-content">
                 <Filters
-                    StatusFilter={filters}
-                    StatusGender={filters}
-                    StatusSpecies={filters}
+                    StatusFilter={changeStatus}
+                    StatusGender={changeGender}
+                    StatusSpecies={changeSpecies}
                 />
                 <CharacterTarget
                     results={results}
