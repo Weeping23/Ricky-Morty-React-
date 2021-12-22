@@ -11,7 +11,7 @@ export function Header() {
       <ul className="header-menu">
         <Link to="/">Characters</Link>
         <Link to="episode">Episode</Link>
-        <Link to="location">Locations</Link>
+        <Link to="location">Location</Link>
         <li><img src={cart} alt=""></img></li>
       </ul>
     </header>

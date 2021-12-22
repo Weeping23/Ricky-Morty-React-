@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function MainTarget({results, search}) {
+export function CharacterTarget ({results, search}) {
     function toLowerCase(textToEdit) {
         return textToEdit.toLowerCase();
     }
