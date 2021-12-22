@@ -17,8 +17,8 @@ body {
   background-color: white;
   border-bottom: 1px solid #d1d1d1 ;
 }
-.header-wiky{
-  color: blue;
+.header-wiky, .Episode-Title{  
+  color: #4085F6;
 }
 .header-logo{
   display: flex;
