@@ -39,15 +39,20 @@ return (
         <HeaderEpisode
             name={results.name}
             airDate={results.air_date}
-        />
-        <Menu
-            functional={ChangeEpisode}
-            name={AllEpisodes[episodeIndex]}
-            value={AllEpisodes}
-        />
-        <MainTarget
-            results={characters}
-        />
+        /><div className='main-con'>
+            <div className='episodes'>
+                <h4>Pick Episode</h4>
+                <Menu
+                    functional={ChangeEpisode}
+                    name={AllEpisodes[episodeIndex]}
+                    value={AllEpisodes}
+                />
+                </div>
+            
+    <MainTarget
+        results={characters}
+    /></div>
+        
     </main>
 )
 }
