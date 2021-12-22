@@ -9,7 +9,7 @@ export function Location() {
     let [results, setResults] = useState([]);
     let [characters, setCharacters] = useState([])
     let [location, setLocation] = useState(1);
-    let [locationIndex, setEpisodeIndex] = useState(0);
+    let [locationIndex] = useState(0);
     let api = `https://rickandmortyapi.com/api/location/${location}`
     let AllLocation = [];
     //** BUCLE FOR*/

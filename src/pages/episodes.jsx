@@ -8,7 +8,7 @@ export function Episodes() {
     let [results, setResults] = useState([]);
     let [characters, setCharacters] = useState([])
     let [episode, setEpisode] = useState(1);
-    let [episodeIndex, setEpisodeIndex] = useState(0);
+    let [episodeIndex] = useState(0);
     let api = `https://rickandmortyapi.com/api/episode/${episode}`
     let AllEpisodes = [];
     //** BUCLE FOR*/
