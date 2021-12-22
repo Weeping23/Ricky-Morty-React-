@@ -1,27 +1,28 @@
 import React, { useState, useEffect } from 'react';
 //**COMPONENTES */
-import { MenuEpisode } from '../components/Episodes/MenuEpisode';
-import { HeaderEpisode } from '../components/Episodes/HeaderEpisode'
-import { CharacterTarget } from '../components/Characters/CharacterTarget';
+import { HeaderLocation } from '../components/Location/HeaderLocation';
+import { MainTargetLocation } from '../components/Location/MainTargetLocation';
+import { MenuLocation } from "../components/Location/MenuLocation";
 //**FUNCIÓN MATRIZ */
-export function Episodes() {
+export function Location() {
+    //**VARIABLES */
     let [results, setResults] = useState([]);
     let [characters, setCharacters] = useState([])
-    let [episode, setEpisode] = useState(1);
-    let [episodeIndex, setEpisodeIndex] = useState(0);
-    let api = `https://rickandmortyapi.com/api/episode/${episode}`
-    let AllEpisodes = [];
+    let [location, setLocation] = useState(1);
+    let [locationIndex, setEpisodeIndex] = useState(0);
+    let api = `https://rickandmortyapi.com/api/location/${location}`
+    let AllLocation = [];
     //** BUCLE FOR*/
     (() => {
-        for (let i = 1; i < 52; i++) {
-            AllEpisodes.push(i)
+        for (let i = 1; i < 126; i++) {
+            AllLocation.push(i)
         }
     })()
     //** CAPTURA UN EVENTO Y DEVUELVE OBJETO ARRAY */
-    function ChangeEpisode(event) {
+    function ChangeLocation(event) {
         let str = event.target.value;
         let num = str.match(/\d+/g);
-        setEpisode(num)
+        setLocation(num)
     }
     //** FUNCIÓN ASÍNCRONAS CON DOS VARIABLES */
     useEffect(() => {
@@ -30,7 +31,7 @@ export function Episodes() {
                 const response = await fetch(api);
                 const data = await response.json();
                 setResults(data);
-                let characters = await Promise.all(data.characters.map((url) => {
+                let characters = await Promise.all(data.residents.map((url) => {
                     return fetch(url).then(response => response.json())
                 }))
                 setCharacters(characters)
@@ -40,23 +41,24 @@ export function Episodes() {
     //**RETORNA A MAIN */
     return (
         <main className='main'>
-            <HeaderEpisode
+            <HeaderLocation
                 name={results.name}
-                airDate={results.air_date}
+                type={results.type}
             />
             <div className='main-con'>
                 <div className='episodes'>
-                    <h4>Pick Episode</h4>
-                    <MenuEpisode
-                        functional={ChangeEpisode}
-                        name={AllEpisodes[episodeIndex]}
-                        value={AllEpisodes}
+                    <h4>Pick Location</h4>
+                    <MenuLocation
+                        functional={ChangeLocation}
+                        name={AllLocation[locationIndex]}
+                        value={AllLocation}
                     />
                 </div>
-                <CharacterTarget
+
+                <MainTargetLocation
                     results={characters}
                 />
-                </div>
+            </div>
         </main>
     )
 }
