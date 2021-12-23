@@ -54,7 +54,6 @@ export function Location() {
                         value={AllLocation}
                     />
                 </div>
-
                 <MainTargetLocation
                     results={characters}
                 />

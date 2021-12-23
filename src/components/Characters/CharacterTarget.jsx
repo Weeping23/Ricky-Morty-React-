@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function CharacterTarget ({results, search}) {
+export function CharacterTarget ({results, search, addToCart}) {
     function toLowerCase(textToEdit) {
         return textToEdit.toLowerCase();
     }
@@ -17,7 +17,7 @@ export function CharacterTarget ({results, search}) {
                             <p className={toLowerCase(personaje.status)}>{personaje.status}</p>
                         </div>
                         <div>
-                            <button className="buy">Add to cart</button>
+                            <button onClick={addToCart} className="buy">Add to cart</button>
                         </div>
                     </article>)) :
                         (

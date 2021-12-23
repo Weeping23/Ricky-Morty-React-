@@ -1,5 +1,5 @@
 import React from 'react'
-import cart from "../assets/img/shopping-cart.png"
+import photocart from "../assets/img/shopping-cart.png"
 import { Link } from 'react-router-dom'
 export function Header() {
   return (
@@ -12,7 +12,7 @@ export function Header() {
         <Link to="/">Characters</Link>
         <Link to="episode">Episode</Link>
         <Link to="location">Location</Link>
-        <li><img src={cart} alt=""></img></li>
+        <Link to="cart"><img src={photocart} alt=""></img></Link>
       </ul>
     </header>
   )

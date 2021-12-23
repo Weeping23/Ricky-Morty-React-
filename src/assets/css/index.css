@@ -5,3 +5,14 @@ body, html{
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.box{
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 1rem #00000025;
+}
+.grid-responsive{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minimax(200px, 1fr));
+  gap: 1rem;
+}
