@@ -238,3 +238,61 @@ h3 {
   border-radius: 10px;
   border: solid 1px rgb(172, 172, 172);
 }
+
+@media only screen and (max-width:1000px){
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-search-target {
+    width: 100%;
+  }
+  .main-filter {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: max-content;
+    padding: 5px;
+  }
+  .main-filter div {
+    display: flex;
+    flex-direction: row;
+    margin: 3px;
+  }
+  .main-filter div h4 {
+    margin: 5px;
+  }
+  
+}
+@media only screen and (max-width:680px){
+ 
+  .header-logo {
+    width: 60%;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+  } 
+  
+  .main-filter {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    width: max-content;
+  }
+  .main-search button {
+    width: max-content;
+    height: 33px;
+  }
+  .main-target {
+    justify-content: center;
+  }
+}
+
+
