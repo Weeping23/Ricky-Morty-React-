@@ -1,0 +1,19 @@
+      /** VARIABLES  */
+$box: 0 0 1rem #00000025;
+$margin: 1rem;
+$padding: 1rem;
+$columns: repeat(auto-fit, minimax(200px, 1fr));
+$gap: 1rem;
+      /* CARRITO */
+.box {
+  padding: $padding;
+  margin: $margin;
+  box-shadow: $box;
+}
+
+.grid-responsive {  
+  grid-template: {
+    columns: $columns;
+  }
+  gap: $gap;
+}

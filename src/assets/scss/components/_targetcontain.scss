@@ -1,0 +1,11 @@
+/* VARIABLES */
+$width: 78%;
+$padding: 1%;
+$wrap: wrap;
+/* CONTENEDOR DE TARJETAS */
+.main-target {
+    padding-top: $padding;
+    display: flex;
+    width: $width;
+    flex-wrap: $wrap;
+  }

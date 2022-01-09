@@ -1,0 +1,312 @@
+@charset "UTF-8";
+/* VARIABLES */
+/* REESTABLEZCO VALORES DE LA PÁGINA */
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6; }
+
+/* CONTENEDOR PADRE */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+/* HEADER */
+/* HEADER LOGO */
+/* HEADER NAV */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 8%;
+  background-color: white;
+  border-bottom: 1px solid #d1d1d1; }
+  .header a {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    justify-content: space-around;
+    text-decoration: none;
+    color: black; }
+  .header img {
+    width: 32px;
+    height: auto; }
+  .header h2 {
+    display: flex;
+    margin-left: 3px; }
+
+.header-wiky,
+.Episode-Title {
+  color: #4085f6; }
+
+.header-logo {
+  display: flex;
+  width: 28%;
+  margin-left: 5%; }
+
+.header-menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-style: 20px;
+  font-size: 20px;
+  margin-right: 5%;
+  width: 40%; }
+
+.header-nav {
+  display: flex; }
+
+/* VARIABLES */
+/* CONTENEDOR PADRE */
+.main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  flex-direction: column; }
+
+/* CONTENEDOR DE TARJETAS Y FILTROS */
+.main-content {
+  display: flex;
+  width: 85%;
+  flex-wrap: wrap; }
+
+/* CONTENEDOR EPISODIOS Y LOCACIONES */
+.main-con {
+  display: flex;
+  width: 85%; }
+
+.episodes {
+  display: flex;
+  flex-direction: column;
+  width: 35%; }
+
+/* SELECCIONADOR EPISODIOS Y LOCACIONES */
+.form-select {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40px;
+  border-radius: 10px;
+  border: solid 1px #acacac; }
+
+/* VARIABLES */
+/* CONTENEDOR BUSCADOR Y LIMPIADOR */
+.main-search {
+  width: 79%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  /* BOTON DE BUSCAR */ }
+  .main-search button {
+    background-color: #3b82f6;
+    color: white;
+    width: 11%;
+    border: none;
+    border-radius: 5px;
+    height: 49px;
+    cursor: pointer; }
+
+/* BUSCADOR */
+.main-search-target {
+  display: flex;
+  justify-content: space-evenly;
+  width: 81%; }
+  .main-search-target input {
+    width: 70%;
+    height: 38px; }
+
+/** VARIABLES */
+/* LIMPIAR FILTROS */
+.main-clear {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.main-clear span {
+  cursor: pointer; }
+
+/* VARIABLES */
+/* CONTENEDOR DE FILTROS */
+.main-filter-contain {
+  display: flex;
+  width: 80%;
+  justify-content: space-between; }
+
+/* FILTROS */
+.main-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 21%;
+  background: white;
+  height: max-content;
+  padding-bottom: 2%;
+  border-radius: 15px; }
+
+.main-filter div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+label {
+  font-size: 14px;
+  align-self: center; }
+
+/* VARIABLES */
+/* CONTENEDOR DE TARJETAS */
+.main-target {
+  padding-top: 1%;
+  display: flex;
+  width: 78%;
+  flex-wrap: wrap; }
+
+/* VARIABLES */
+/* TARJETA DE PERSONAJES */
+.main-character {
+  width: 192px;
+  height: 420px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  margin-left: 3%;
+  margin-bottom: 3%; }
+
+.main-img {
+  display: flex;
+  border-radius: 51%;
+  width: 135px;
+  height: auto; }
+
+img {
+  border-radius: 50%;
+  width: 137px;
+  height: 139px;
+  margin-bottom: 10px; }
+
+h2 {
+  font-size: 20px;
+  margin: 0; }
+
+h3 {
+  font-size: 15px;
+  font-weight: normal;
+  color: gray;
+  padding: 15px;
+  margin: 0; }
+
+.alive,
+.dead,
+.unknown {
+  padding: 10px;
+  border-radius: 15px;
+  width: 65px;
+  text-align: center; }
+
+.alive {
+  color: green;
+  background-color: rgba(70, 214, 70, 0.5); }
+
+.dead {
+  color: red;
+  background-color: rgba(250, 116, 116, 0.5); }
+
+.unknown {
+  color: gray;
+  background-color: rgba(206, 206, 206, 0.5); }
+
+.buy {
+  border: 0;
+  color: blue;
+  background-color: #98befc9d;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
+  font-weight: bold; }
+
+/* VARIABLES */
+/* FLECHAS */
+.main-following {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 62px;
+  margin-left: 78px; }
+  .main-following img {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    cursor: pointer; }
+
+.arrowback {
+  transform: rotate(90deg); }
+
+.arrowfollowing {
+  transform: rotate(271deg); }
+
+/** VARIABLES  */
+/* CARRITO */
+.box {
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 1rem #00000025; }
+
+.grid-responsive {
+  grid-template-columns: repeat(auto-fit, minimax(200px, 1fr));
+  gap: 1rem; }
+
+/* VARIABLES */
+/* MEDIA QUERYS */
+@media only screen and (max-width: 1000px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .main-search-target {
+    width: 100%; }
+  .main-filter {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: max-content;
+    padding: 5px; }
+    .main-filter div {
+      display: flex;
+      flex-direction: row;
+      margin: 3px; }
+    .main-filter div h4 {
+      margin: 5px; } }
+
+@media only screen and (max-width: 680px) {
+  .header-logo {
+    width: 60%; }
+  h1 {
+    font-size: 30px; }
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    width: 90px; }
+  .main-filter {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    width: max-content; }
+  .main-search button {
+    width: max-content;
+    height: 33px; }
+  .main-target {
+    justify-content: center; } }

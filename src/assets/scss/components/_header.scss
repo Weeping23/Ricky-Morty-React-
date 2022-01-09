@@ -1,0 +1,66 @@
+/* HEADER */
+$between: space-between;
+$width-header: 100%;
+$height-header: 8%;
+$color: #4085f6;
+$background: white;
+$border-bt: 1px solid #d1d1d1;
+/* HEADER LOGO */
+$width-logo: 28%;
+$margin-logo: 5%;
+/* HEADER NAV */
+$around: space-around;
+$list: none;
+$style: normal;
+$size: 20px;
+$margin-nav: 5%;
+$width-nav: 40%;
+$align: center;
+$maxcon: max-content;
+$color1: black;
+
+.header {
+  display: flex;
+  justify-content: $between;
+  width: $width-header;
+  height: $height-header;
+  background-color: $background;
+  border-bottom: $border-bt;
+  a {
+    display: flex;
+    align-items: $align;
+    width: $maxcon;
+    justify-content: $around;
+    text-decoration: $list;
+    color: $color1;
+  }
+  img {
+    width: 32px;
+    height: auto;
+  }
+  h2 {
+    display: flex;
+    margin-left: 3px;
+  }
+}
+.header-wiky,
+.Episode-Title {
+  color: $color;
+}
+.header-logo {
+  display: flex;
+  width: $width-logo;
+  margin-left: $margin-logo;
+}
+.header-menu {
+  display: flex;
+  justify-content: $around;
+  list-style: $list;
+  font-style: $size;
+  font-size: $size;
+  margin-right: $margin-nav;
+  width: $width-nav;
+}
+.header-nav {
+  display: flex;
+}

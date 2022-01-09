@@ -1,0 +1,92 @@
+/* VARIABLES */
+$background-target: white;
+$alive: rgba(70, 214, 70, 0.5);
+$dead: rgba(250, 116, 116, 0.5);
+$unknown: rgba(206, 206, 206, 0.5);
+$buy: #98befc9d;
+$primary: green;
+$secundary: red;
+$terciary: gray;
+$quartary: blue;
+$cursor: pointer;
+$align: center;
+$direction: column;
+$normal: normal;
+$radius-target: 25px;
+$radius-div: 51%;
+$radius-img: 50%;
+$radius-buy: 5px;
+$margin-none: 0;
+$margin-target: 3%;
+$margin-img: 10px;
+$functional: 15px;
+$size: 20px;
+$font-weight: bold;
+/* TARJETA DE PERSONAJES */
+.main-character {
+  width: 192px;
+  height: 420px;
+  background-color: $background-target;
+  display: flex;
+  justify-content: $align;
+  flex-direction: $direction;
+  align-items: $align;
+  border-radius: $radius-target;
+  margin-left: $margin-target;
+  margin-bottom: $margin-target;
+}
+.main-img {
+  display: flex;
+  border-radius: $radius-div;
+  width: 135px;
+  height: auto;
+}
+img {
+  border-radius: $radius-img;
+  width: 137px;
+  height: 139px;
+  margin-bottom: $margin-img;
+}
+h2 {
+  font-size: $size;
+  margin: $margin-none;
+}
+h3 {
+  font-size: $functional;
+  font-weight: $normal;
+  color: $terciary;
+  padding: $functional;
+  margin: $margin-none;
+}
+
+.alive,
+.dead,
+.unknown {
+  padding: $margin-img;
+  border-radius: $functional;
+  width: 65px;
+  text-align: $align;
+}
+
+.alive {
+  color: $primary;
+  background-color: $alive;
+}
+.dead {
+  color: $secundary;
+  background-color: $dead;
+}
+.unknown {
+  color: $terciary;
+  background-color: $unknown;
+}
+.buy {
+  border: $margin-none;
+  color: $quartary;
+  background-color: $buy;
+  cursor: $cursor;
+  padding: $margin-img;
+  border-radius: $radius-buy;
+  width: 150px;
+  font-weight: $font-weight;
+}

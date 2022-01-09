@@ -1,0 +1,38 @@
+/* VARIABLES */
+$width-contain: 80%;
+$width-filter: 21%;
+$color: white;
+$maxcon: max-content;
+$padding-bt: 2%;
+$border: 15px;
+$font: 14px;
+$align: center;
+$direction: column;
+$between: space-between;
+/* CONTENEDOR DE FILTROS */
+.main-filter-contain {
+    display: flex;
+    width: $width-contain;
+    justify-content: $between;
+  }
+  /* FILTROS */
+  .main-filter {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    width: $width-filter;
+    background: $color;
+    height: $maxcon;
+    padding-bottom: $padding-bt;
+    border-radius: $border;
+  }
+  .main-filter div {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+  }
+  
+  label {
+    font-size: $font;
+    align-self: $align;
+  }

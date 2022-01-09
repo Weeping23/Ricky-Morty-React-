@@ -1,0 +1,28 @@
+      /* VARIABLES */
+$margin: 78px;
+$rotatex: rotate(90deg);
+$rotatey: rotate(271deg);
+$cursor: pointer;
+$around: space-around;
+$width: 90%;
+$height: 62px;
+      /* FLECHAS */
+.main-following {
+    display: flex;
+    justify-content: $around;
+    width: $width;
+    height: $height;
+    margin-left: $margin;
+    img {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      cursor: $cursor;
+    }
+  }
+  .arrowback {
+    transform: $rotatex;
+  }
+  .arrowfollowing {
+    transform: $rotatey;
+  }

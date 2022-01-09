@@ -1,0 +1,28 @@
+      /* VARIABLES */
+$color: #f3f4f6;
+$font: Arial, Helvetica, sans-serif;
+$max: 1280px;
+$margin: 0;
+$padding: 0;
+$margincon: 0 auto;
+$height: 100%;
+$boxsize: border-box;
+$direction: column; 
+/* REESTABLEZCO VALORES DE LA PÁGINA */
+body,
+html {
+  box-sizing: $boxsize;
+  margin: $margin;
+  padding: $padding;
+  height: $height;
+  font-family: $font;
+  background: $color;
+}
+/* CONTENEDOR PADRE */
+.container {
+  max-width: $max;
+  margin: $margincon;
+  display: flex;
+  flex-direction: $direction;
+  height: $height;
+}

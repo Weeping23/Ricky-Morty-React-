@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function CharacterTarget ({results, search, addToCart}) {
+export default function CharacterTarget ({results, search, price, addToCart}) {
     function toLowerCase(textToEdit) {
         return textToEdit.toLowerCase();
     }
@@ -12,12 +12,13 @@ export function CharacterTarget ({results, search, addToCart}) {
                             <img src={personaje.image} alt="" />
                         </div>
                         <h2>{personaje.name}</h2>
+                        <h5>€{price}</h5>
                         <h3>{personaje.location.name}</h3>
                         <div>
                             <p className={toLowerCase(personaje.status)}>{personaje.status}</p>
                         </div>
                         <div>
-                            <button onClick={addToCart} className="buy">Add to cart</button>
+                            <button className="buy">Add to cart</button>
                         </div>
                     </article>)) :
                         (
@@ -26,3 +27,4 @@ export function CharacterTarget ({results, search, addToCart}) {
                 </div>
     )
 }
+export {CharacterTarget}

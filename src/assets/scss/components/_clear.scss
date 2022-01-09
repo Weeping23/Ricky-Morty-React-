@@ -1,0 +1,13 @@
+      /** VARIABLES */
+$cursor: pointer;
+$direction: column;
+$align: center;
+      /* LIMPIAR FILTROS */
+.main-clear {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+  }
+  .main-clear span {
+    cursor: $cursor;
+  }

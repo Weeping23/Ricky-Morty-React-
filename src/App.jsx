@@ -1,9 +1,9 @@
 import React from "react";
 //** IMPORTO COMPONENTES */
-import './assets/css/app.css';
-import { Header } from "./components/header";
+import './assets/css/styles.css';
+import { Header } from "./components/Header";
 import { Characters } from "./pages/Characters";
-import { Episodes } from "./pages/episodes";
+import { Episodes } from "./pages/Episodes";
 import { Location } from "./pages/Location";
 import { ShoppingCart } from "./pages/Cart"
 //** IMPORTO ROUTER DE REACT */

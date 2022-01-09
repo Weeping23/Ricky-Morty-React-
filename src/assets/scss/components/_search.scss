@@ -1,0 +1,37 @@
+/* VARIABLES */
+$align: center;
+$evenly: space-evenly;
+$margin-bt: 10px;
+$background: #3b82f6;
+$color: white;
+$none: none;
+$radius: 5px;
+$cursor: pointer;
+/* CONTENEDOR BUSCADOR Y LIMPIADOR */
+.main-search {
+  width: 79%;
+  display: flex;
+  align-items: $align;
+  justify-content: $evenly;
+  margin-bottom: $margin-bt;
+  /* BOTON DE BUSCAR */
+  button {
+    background-color: $background;
+    color: $color;
+    width: 11%;
+    border: $none;
+    border-radius: $radius;
+    height: 49px;
+    cursor: $cursor;
+  }
+}
+/* BUSCADOR */
+.main-search-target {
+  display: flex;
+  justify-content: $evenly;
+  width: 81%; 
+  input {
+    width: 70%;
+    height: 38px;
+  }
+}

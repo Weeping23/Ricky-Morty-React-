@@ -1,11 +1,11 @@
 //**INSTANCIO LOS ESTADOS: INICIAL, DESPUES DE MODIFICAR */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 //**IMAGENES */
 import arrow from "../assets/img/arrow.svg";
 //**IMPORTO COMPONENTES*/
 import { CharacterTarget } from '../components/Characters/CharacterTarget';
 import { CharacterSearch } from '../components/Characters/CharacterSearch';
-import { Filters } from '../components/Characters/Filters';
+import { Filters } from '../components/Characters/Filters'
 //**FUNCIÓN MATRIZ*/
 export function Characters() {
     //**DECLARO VARIABLE COMO STRING*/ 
@@ -15,6 +15,7 @@ export function Characters() {
     let [status, setStatus] = useState('');
     let [species, setSpecies] = useState('');
     let [gender, setGender] = useState('');
+    let [price, setPrice] = useState ('9.00')
     //* ESTABLEZCO NUMERO DE PÁGINA INICIAL */
     let [characterIndex, setCharacterIndex] = useState(1);
     //* TOMO RUTAS DE MI API Y LA ADENTRO EN UNA VARIABLE */
@@ -73,6 +74,7 @@ export function Characters() {
                 <CharacterTarget
                     results={results}
                     search={search}
+                    price={price}
                 />
             </div>
             <div className="main-following">

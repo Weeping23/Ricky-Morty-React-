@@ -1,0 +1,42 @@
+/* VARIABLES */
+$align: center;
+$direction: column;
+$evenly: space-evenly;
+$border: solid 1px rgb(172, 172, 172);
+$radius: 10px;
+$height: 40px;
+/* CONTENEDOR PADRE */
+.main {
+  display: flex;
+  width: 100%;
+  justify-content: $align;
+  align-items: $align;
+  height: 80%;
+  flex-direction: $direction;
+} 
+/* CONTENEDOR DE TARJETAS Y FILTROS */
+.main-content {
+  display: flex;
+  width: 85%;
+  flex-wrap: wrap;
+}
+/* CONTENEDOR EPISODIOS Y LOCACIONES */
+.main-con {
+  display: flex;
+  width: 85%;
+} 
+.episodes {
+  display: flex;
+  flex-direction: $direction;
+  width: 35%;
+}
+/* SELECCIONADOR EPISODIOS Y LOCACIONES */
+.form-select {
+  display: flex;
+  width: 80%;
+  align-items: $align;
+  justify-content: $evenly;
+  height: $height;
+  border-radius: $radius;
+  border: $border;
+}
